@@ -5,13 +5,14 @@ import Accordion from './components/Accordion/Accordion';
 // import {Raiting} from "./components/Raiting/Raiting";
 import {log} from 'console';
 import {OnOff} from './components/OnOff/OnOff';
-import UncontrolledAccordion from "./components/UncontrolledAccordion/Accordion";
-import {Raiting} from "./components/UncontrolledRaiting/Raiting"
+import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import {UncontrolledRaiting} from "./components/UncontrolledRaiting/UncontrolledRaiting"
+import {Raiting} from "./components/Raiting/Raiting";
 
 function App(props: any) {
     console.log('App rendering');
     return (
-        <div>
+        <div className={"App"}>
             {/*<PageTitle title = {'This is APP component'}/>*/}
             {/*<PageTitle title = {'My friends'}/>*/}
             {/*Article 1*/}
@@ -29,12 +30,13 @@ function App(props: any) {
             {/*<Raiting value = {5}/>*/}
 
             <OnOff />
-            <OnOff />
 
             <UncontrolledAccordion titleValue = {'Menu'}/>
-            <UncontrolledAccordion titleValue = {'Users'}/>
 
-            <Raiting />
+            <UncontrolledRaiting />
+
+            <Raiting value={3}/>
+            <Accordion titleValue={"Menu"} collapsed={false}/>
 
         </div>
     );
