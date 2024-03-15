@@ -2,10 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Accordion from './components/Accordion/Accordion';
-import {Raiting} from "./components/Raiting/Raiting";
+// import {Raiting} from "./components/Raiting/Raiting";
 import {log} from 'console';
 import {OnOff} from './components/OnOff/OnOff';
 import UncontrolledAccordion from "./components/UncontrolledAccordion/Accordion";
+import {Raiting} from "./components/UncontrolledRaiting/Raiting"
 
 function App(props: any) {
     console.log('App rendering');
@@ -32,6 +33,8 @@ function App(props: any) {
 
             <UncontrolledAccordion titleValue = {'Menu'}/>
             <UncontrolledAccordion titleValue = {'Users'}/>
+
+            <Raiting />
 
         </div>
     );
