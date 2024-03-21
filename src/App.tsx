@@ -6,7 +6,7 @@ import Accordion from './components/Accordion/Accordion';
 import {log} from 'console';
 import {OnOff} from './components/OnOff/OnOff';
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
-import {UncontrolledRaiting} from "./components/UncontrolledRaiting/UncontrolledRaiting"
+import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRaiting"
 import {Raiting} from "./components/Raiting/Raiting";
 
 function App(props: any) {
@@ -33,7 +33,7 @@ function App(props: any) {
 
             <UncontrolledAccordion titleValue = {'Menu'}/>
 
-            <UncontrolledRaiting />
+            <UncontrolledRating />
 
             <Raiting value={3}/>
             <Accordion titleValue={"Menu"} collapsed={false}/>
