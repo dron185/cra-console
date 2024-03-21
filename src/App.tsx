@@ -35,8 +35,8 @@ function App(props: any) {
 
             <UncontrolledRating />
 
-            <Raiting value={3}/>
-            <Accordion titleValue={"Menu"} collapsed={false}/>
+            {/*<Raiting value={3}/>*/}
+            {/*<Accordion titleValue={"Menu"} collapsed={false}/>*/}
 
         </div>
     );
