@@ -1,33 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
-import Accordion from './components/Accordion/Accordion';
-// import {Raiting} from "./components/Raiting/Raiting";
-import {log} from 'console';
 import {OnOff} from './components/OnOff/OnOff';
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRaiting"
-import {Raiting} from "./components/Raiting/Raiting";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
 
 function App(props: any) {
     console.log('App rendering');
+
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+
     return (
         <div className={"App"}>
+
+            <Rating value={ratingValue} onClick={setRatingValue}/>
             {/*<PageTitle title = {'This is APP component'}/>*/}
             {/*<PageTitle title = {'My friends'}/>*/}
             {/*Article 1*/}
-            {/*<Raiting value = {3}/>*/}
+            {/*<Rating value = {3}/>*/}
 
             {/*<Accordion titleValue = {'Menu'} collapsed = {true}/>*/}
             {/*<Accordion titleValue = {'Users'} collapsed = {false}/>*/}
 
             {/*Article 2*/}
-            {/*<Raiting value = {0}/>*/}
-            {/*<Raiting value = {1}/>*/}
-            {/*<Raiting value = {2}/>*/}
-            {/*<Raiting value = {3}/>*/}
-            {/*<Raiting value = {4}/>*/}
-            {/*<Raiting value = {5}/>*/}
+            {/*<Rating value = {0}/>*/}
+            {/*<Rating value = {1}/>*/}
+            {/*<Rating value = {2}/>*/}
+            {/*<Rating value = {3}/>*/}
+            {/*<Rating value = {4}/>*/}
+            {/*<Rating value = {5}/>*/}
 
             <OnOff />
 
@@ -35,7 +36,6 @@ function App(props: any) {
 
             <UncontrolledRating />
 
-            {/*<Raiting value={3}/>*/}
             {/*<Accordion titleValue={"Menu"} collapsed={false}/>*/}
 
         </div>
