@@ -27,7 +27,7 @@ function App(props: any) {
                 onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}
             />
 
-            <NewOnOff on={switchOn} onChange={setswitchOn}/>
+            {/*<NewOnOff on={switchOn} onChange={setswitchOn}/>*/}
 
             {/*<PageTitle title = {'This is APP component'}/>*/}
             {/*<PageTitle title = {'My friends'}/>*/}
@@ -45,8 +45,9 @@ function App(props: any) {
             {/*<Rating value = {4}/>*/}
             {/*<Rating value = {5}/>*/}
 
-            {/*<UncontrolledOnOff/>*/}
-            {/*<UncontrolledAccordion titleValue = {'Menu'}/>*/}
+
+            <UncontrolledOnOff onChange={setswitchOn}/> {switchOn.toString()}
+            <UncontrolledAccordion titleValue = {'UncontrolledAccordion'}/>
             {/*<UncontrolledRating />*/}
 
         </div>
