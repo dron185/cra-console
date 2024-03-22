@@ -5,7 +5,7 @@ type OnOfPropsType = {
 }
 
 
-export const OnOff = (props: OnOfPropsType) => {
+export const UncontrolledOnOff = (props: OnOfPropsType) => {
 
     let [on, setOn] = React.useState(false)
 
