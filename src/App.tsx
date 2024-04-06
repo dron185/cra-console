@@ -27,7 +27,7 @@ function App(props: any) {
                 onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}
             />
 
-            {/*<NewOnOff on={switchOn} onChange={setswitchOn}/>*/}
+            <NewOnOff on={switchOn} onChange={setswitchOn}/>
 
             {/*<PageTitle title = {'This is APP component'}/>*/}
             {/*<PageTitle title = {'My friends'}/>*/}
