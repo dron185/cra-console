@@ -6,7 +6,7 @@ type OnOfPropsType = {
 }
 
 
-export const NewOnOff = (props: OnOfPropsType) => {
+export const OnOff = (props: OnOfPropsType) => {
 
     const onStyle = {
         width:'30px',

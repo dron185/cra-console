@@ -4,8 +4,8 @@ import {UncontrolledOnOff} from './components/UncontrolledOnOff/UncontrolledOnOf
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRaiting"
 import {Rating, RatingValueType} from "./components/Rating/Rating";
-import Accordion from "./components/Accordion/Accordion";
-import {NewOnOff} from "./components/newOnOff/newOnOff";
+import {Accordion} from "./components/Accordion/Accordion";
+import {OnOff} from "./components/OnOff/./OnOff";
 
 
 function App(props: any) {
@@ -27,7 +27,7 @@ function App(props: any) {
                 onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}
             />
 
-            <NewOnOff on={switchOn} onChange={setswitchOn}/>
+            <OnOff on={switchOn} onChange={setswitchOn}/>
 
             {/*<PageTitle title = {'This is APP component'}/>*/}
             {/*<PageTitle title = {'My friends'}/>*/}

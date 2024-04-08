@@ -23,7 +23,7 @@ export default {
 //     },
 // }
 
-const onChangeHandler = action('onChange')
+const onChangeHandler = action('Accordion mode change event fired')
 
 export const CollapsedAccordion = () => {
     return <Accordion
@@ -42,11 +42,10 @@ export const OpenedAccordion = () => {
 }
 
 export const AccordionDemo = () => {
-    const [collapsed, setCollapsed] = useState(false)
+    const [value, setValue] = useState(false)
     return <Accordion
         titleValue={"Accordion"}
-        collapsed={collapsed}
-        onChange={() => {
-            setCollapsed(!collapsed)
-        }}/>
+        collapsed={value}
+        onChange={() => {setValue(!value)}}
+    />
 }
