@@ -6,6 +6,7 @@ import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledR
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {Accordion} from "./components/Accordion/Accordion";
 import {OnOff} from "./components/OnOff/./OnOff";
+import { Select } from './components/Select/Select';
 
 
 function App(props: any) {
@@ -17,14 +18,28 @@ function App(props: any) {
 
     let [switchOn, setswitchOn] = useState<boolean>(false)
 
+
+    let [selectClosed, setSelectClosed] = useState<boolean>(true)
+    let [selectTitleValue, setSelectTitleValue] = useState("CITY")
+
     return (
         <div className={"App"}>
-
-            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <Select
+                setSelectClosed={setSelectClosed}
+                setSelectTitleValue={setSelectTitleValue}
+                selectTitle={selectTitleValue}
+                // value={}
+                onChange={()=>{setSelectClosed(!selectClosed)}}
+                selectCondition={selectClosed}
+                items={[{title: "Brest", value: 1}, {title: "Vitebsk", value: 2}, {title: "Gomel", value: 3}, {title: "Grodno", value: 4}]}
+            />
+                <Rating value={ratingValue} onClick={setRatingValue}/>
             <Accordion
                 titleValue={"Menu"}
                 collapsed={accordionCollapsed}
                 onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}
+                items={[{title: "Dimych", value: 1}, {title: "Valera", value: 2}, {title: "Artem", value: 3}, {title: "Viktor", value: 4}]}
+                onClick={(id)=>{alert(`bla-bla ${id}`)}}
             />
 
             <OnOff on={switchOn} onChange={setswitchOn}/>
