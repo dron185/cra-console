@@ -2,11 +2,9 @@ import React, {useState} from 'react';
 import './App.css';
 import {UncontrolledOnOff} from './components/UncontrolledOnOff/UncontrolledOnOff';
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
-import {UncontrolledRating} from "./components/UncontrolledRaiting/UncontrolledRaiting"
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {Accordion} from "./components/Accordion/Accordion";
 import {OnOff} from "./components/OnOff/./OnOff";
-import { Select } from './components/Select/Select';
 
 
 function App(props: any) {
@@ -18,21 +16,8 @@ function App(props: any) {
 
     let [switchOn, setswitchOn] = useState<boolean>(false)
 
-
-    let [selectClosed, setSelectClosed] = useState<boolean>(true)
-    let [selectTitleValue, setSelectTitleValue] = useState("CITY")
-
     return (
         <div className={"App"}>
-            <Select
-                setSelectClosed={setSelectClosed}
-                setSelectTitleValue={setSelectTitleValue}
-                selectTitle={selectTitleValue}
-                // value={}
-                onChange={()=>{setSelectClosed(!selectClosed)}}
-                selectCondition={selectClosed}
-                items={[{title: "Brest", value: 1}, {title: "Vitebsk", value: 2}, {title: "Gomel", value: 3}, {title: "Grodno", value: 4}]}
-            />
                 <Rating value={ratingValue} onClick={setRatingValue}/>
             <Accordion
                 titleValue={"Menu"}
