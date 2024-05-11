@@ -1,6 +1,4 @@
-import {action} from "@storybook/addon-actions";
-import {Accordion} from "../Accordion/Accordion";
-import React, {useState} from "react";
+import React from "react";
 import {Clock} from "./Clock";
 
 export default {
