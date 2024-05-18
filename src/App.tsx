@@ -4,7 +4,8 @@ import {UncontrolledOnOff} from './components/UncontrolledOnOff/UncontrolledOnOf
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {Accordion} from "./components/Accordion/Accordion";
-import {OnOff} from "./components/OnOff/./OnOff";
+import {OnOff} from "./components/OnOff/OnOff";
+import {Clock} from "./components/Clock/Clock";
 
 
 function App(props: any) {
@@ -49,6 +50,9 @@ function App(props: any) {
             <UncontrolledOnOff onChange={setswitchOn}/> {switchOn.toString()}
             <UncontrolledAccordion titleValue = {'UncontrolledAccordion'}/>
             {/*<UncontrolledRating />*/}
+
+
+            <Clock/>
 
         </div>
     );
